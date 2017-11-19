@@ -21,38 +21,36 @@ window.addEventListener('load', function() {
     } else {
       counter.style.color = '#325d81';
     }
-  });
 
+  });
   submit.addEventListener('click', function() {
-    if (textarea.value.length > 0) {
-      var creatediv = document.createElement('div');
-      var container = document.createElement('p');
-      creatediv.classList.add('story');
-      var time = moment().format('LT');
-      container.innerHTML = time;
-      var text = document.getElementById('publications').value;
-      creatediv.innerHTML = text;
-      creatediv.appendChild(container);
-      document.body.appendChild(creatediv);
-      textarea.value = '';
-      //  validacion si pasa los 140 caracteres deshabilita boton.
-      document.getElementById('counter').textContent = '140';
-      document.getElementById('counter').style = '#325d81';
-      submit.disabled = true;
-      textarea.style = 'initial';
-    } else {
-      submit.disabled = true;
-    }
-  });
+   if (textarea.value.length > 0) {
+     var creatediv = document.createElement('div');
+     var container = document.createElement('p');
+     creatediv.classList.add('story');
+     var time = moment().format('LT');
+     container.innerHTML = time;
+     var text = document.getElementById('publications').value;
+     creatediv.innerHTML = text;
+     creatediv.appendChild(container);
+     document.body.appendChild(creatediv);
+     textarea.value = '';
+     document.getElementById('counter').textContent = '140';
+     document.getElementById('counter').style = '#325d81';
+     submit.disabled = true;
+     textarea.style = 'initial';
+   } else {
+     submit.disabled = true;
+   }
+ });
 
-
-  textarea.addEventListener('keyup', function(event) {
-    if (event.keyCode = 13) {
-      textarea.style.height = (textarea.scrollHeight) + 'px';
-    } else if (textarea.value.length >= 171) {
-      textarea.style.height = (textarea.scrollHeight) + 'px';
-    } else {
-      textarea.style = 'initial';
-    }
-  });
+ textarea.addEventListener('keyup', function(event) {
+   if (event.keyCode = 13) {
+     textarea.style.height = (textarea.scrollHeight) + 'px';
+   } else if (textarea.value.length >= 171) {
+     textarea.style.height = (textarea.scrollHeight) + 'px';
+   } else {
+     textarea.style = 'initial';
+   }
+ });
 });
