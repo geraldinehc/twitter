@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Sree Krushnadevaraya', serif;
+}
+body{
+  background-image: url(../assets/images/fondoamor.jpg);
+  background-size: 100%;
+}
+h1 {
+  text-align: center;
+  color: #fff;
+  background: #F7A6D1;
+  /*background: #6ad2f3; color real de twitter*/
+  font-size: 54px;
+}
+
+.textbox-one {
+  background: #fff;
+  display: inline-block;
+  margin: 10px 10px 0 120px;
+  width: 540px;
+  padding-bottom: 10px;
+  border-radius: 3px;
+}
